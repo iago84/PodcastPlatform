@@ -2,7 +2,7 @@
 
 {% block content %}
 <h2>Login</h2>
-<form method="POST" class="form-group">
+<form method="POST" class="form-group container mt-4">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-primary">Login</button>
