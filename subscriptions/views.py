@@ -1,13 +1,12 @@
 from django.views.generic import *
-from django.urls import path
+from django.urls import path, reverse
 from .models import *
 from .forms import *
 from rest_framework.generics import *
 from rest_framework.views import APIView
 from .serializers import *
 
-class IndexView(TemplateView):
-    template_name = "index.html"
+
 
 
 
@@ -16,20 +15,20 @@ class Plan_CreateView(CreateView):
     model = Plan
     form_class = Plan_MF
 
-	    def form_valid(self, form):
-	        # Personaliza lo que sucede cuando el formulario es válido
-	        self.object = form.save()
-	        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
-	        return super().form_valid(form)
+    def form_valid(self, form):
+        # Personaliza lo que sucede cuando el formulario es válido
+        self.object = form.save()
+        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
+        return super().form_valid(form)
 
-	    def form_invalid(self, form):
-	        # Personaliza lo que sucede cuando el formulario no es válido
-	        # Por ejemplo, puedes registrar un mensaje de error
-	        return super().form_invalid(form)
-	
-	    def get_success_url(self):
-	        # Define dinámicamente la URL de redirección al completar con éxito
-	        return reverse("plan_list")
+    def form_invalid(self, form):
+        # Personaliza lo que sucede cuando el formulario no es válido
+        # Por ejemplo, puedes registrar un mensaje de error
+        return super().form_invalid(form)
+
+    def get_success_url(self):
+        # Define dinámicamente la URL de redirección al completar con éxito
+        return reverse("plan_list")
 	
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -53,20 +52,20 @@ class Plan_UpdateView(UpdateView):
     model = Plan
     form_class = Plan_MF
 
-	    def form_valid(self, form):
-	        # Personaliza lo que sucede cuando el formulario es válido
-	        self.object = form.save()
-	        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
-	        return super().form_valid(form)
+    def form_valid(self, form):
+        # Personaliza lo que sucede cuando el formulario es válido
+        self.object = form.save()
+        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
+        return super().form_valid(form)
 
-	    def form_invalid(self, form):
-	        # Personaliza lo que sucede cuando el formulario no es válido
-	        # Por ejemplo, puedes registrar un mensaje de error
-	        return super().form_invalid(form)
-	
-	    def get_success_url(self):
-	        # Define dinámicamente la URL de redirección al completar con éxito
-	        return reverse("plan_list")
+    def form_invalid(self, form):
+        # Personaliza lo que sucede cuando el formulario no es válido
+        # Por ejemplo, puedes registrar un mensaje de error
+        return super().form_invalid(form)
+
+    def get_success_url(self):
+        # Define dinámicamente la URL de redirección al completar con éxito
+        return reverse("plan_list")
 	
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -89,9 +88,9 @@ class Plan_DeleteView(DeleteView):
     template_name = "plan/plan_delete.html"
     model = Plan
 
-	    def get_success_url(self):
-	        # Define dinámicamente la URL de redirección al completar con éxito
-	        return reverse("plan_list")
+    def get_success_url(self):
+        # Define dinámicamente la URL de redirección al completar con éxito
+        return reverse("plan_list")
 	
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -106,20 +105,20 @@ class Subscription_CreateView(CreateView):
     model = Subscription
     form_class = Subscription_MF
 
-	    def form_valid(self, form):
-	        # Personaliza lo que sucede cuando el formulario es válido
-	        self.object = form.save()
-	        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
-	        return super().form_valid(form)
+    def form_valid(self, form):
+        # Personaliza lo que sucede cuando el formulario es válido
+        self.object = form.save()
+        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
+        return super().form_valid(form)
 
-	    def form_invalid(self, form):
-	        # Personaliza lo que sucede cuando el formulario no es válido
-	        # Por ejemplo, puedes registrar un mensaje de error
-	        return super().form_invalid(form)
-	
-	    def get_success_url(self):
-	        # Define dinámicamente la URL de redirección al completar con éxito
-	        return reverse("subscription_list")
+    def form_invalid(self, form):
+        # Personaliza lo que sucede cuando el formulario no es válido
+        # Por ejemplo, puedes registrar un mensaje de error
+        return super().form_invalid(form)
+
+    def get_success_url(self):
+        # Define dinámicamente la URL de redirección al completar con éxito
+        return reverse("subscription_list")
 	
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -143,20 +142,20 @@ class Subscription_UpdateView(UpdateView):
     model = Subscription
     form_class = Subscription_MF
 
-	    def form_valid(self, form):
-	        # Personaliza lo que sucede cuando el formulario es válido
-	        self.object = form.save()
-	        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
-	        return super().form_valid(form)
+    def form_valid(self, form):
+        # Personaliza lo que sucede cuando el formulario es válido
+        self.object = form.save()
+        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
+        return super().form_valid(form)
 
-	    def form_invalid(self, form):
-	        # Personaliza lo que sucede cuando el formulario no es válido
-	        # Por ejemplo, puedes registrar un mensaje de error
-	        return super().form_invalid(form)
-	
-	    def get_success_url(self):
-	        # Define dinámicamente la URL de redirección al completar con éxito
-	        return reverse("subscription_list")
+    def form_invalid(self, form):
+        # Personaliza lo que sucede cuando el formulario no es válido
+        # Por ejemplo, puedes registrar un mensaje de error
+        return super().form_invalid(form)
+
+    def get_success_url(self):
+        # Define dinámicamente la URL de redirección al completar con éxito
+        return reverse("subscription_list")
 	
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -179,9 +178,9 @@ class Subscription_DeleteView(DeleteView):
     template_name = "subscription/subscription_delete.html"
     model = Subscription
 
-	    def get_success_url(self):
-	        # Define dinámicamente la URL de redirección al completar con éxito
-	        return reverse("subscription_list")
+    def get_success_url(self):
+        # Define dinámicamente la URL de redirección al completar con éxito
+        return reverse("subscription_list")
 	
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -196,20 +195,20 @@ class Transaction_CreateView(CreateView):
     model = Transaction
     form_class = Transaction_MF
 
-	    def form_valid(self, form):
-	        # Personaliza lo que sucede cuando el formulario es válido
-	        self.object = form.save()
-	        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
-	        return super().form_valid(form)
+    def form_valid(self, form):
+        # Personaliza lo que sucede cuando el formulario es válido
+        self.object = form.save()
+        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
+        return super().form_valid(form)
 
-	    def form_invalid(self, form):
-	        # Personaliza lo que sucede cuando el formulario no es válido
-	        # Por ejemplo, puedes registrar un mensaje de error
-	        return super().form_invalid(form)
-	
-	    def get_success_url(self):
-	        # Define dinámicamente la URL de redirección al completar con éxito
-	        return reverse("transaction_list")
+    def form_invalid(self, form):
+        # Personaliza lo que sucede cuando el formulario no es válido
+        # Por ejemplo, puedes registrar un mensaje de error
+        return super().form_invalid(form)
+
+    def get_success_url(self):
+        # Define dinámicamente la URL de redirección al completar con éxito
+        return reverse("transaction_list")
 	
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -233,20 +232,20 @@ class Transaction_UpdateView(UpdateView):
     model = Transaction
     form_class = Transaction_MF
 
-	    def form_valid(self, form):
-	        # Personaliza lo que sucede cuando el formulario es válido
-	        self.object = form.save()
-	        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
-	        return super().form_valid(form)
+    def form_valid(self, form):
+        # Personaliza lo que sucede cuando el formulario es válido
+        self.object = form.save()
+        # Agrega lógica personalizada aquí (e.g., mensajes o redirecciones)
+        return super().form_valid(form)
 
-	    def form_invalid(self, form):
-	        # Personaliza lo que sucede cuando el formulario no es válido
-	        # Por ejemplo, puedes registrar un mensaje de error
-	        return super().form_invalid(form)
-	
-	    def get_success_url(self):
-	        # Define dinámicamente la URL de redirección al completar con éxito
-	        return reverse("transaction_list")
+    def form_invalid(self, form):
+        # Personaliza lo que sucede cuando el formulario no es válido
+        # Por ejemplo, puedes registrar un mensaje de error
+        return super().form_invalid(form)
+
+    def get_success_url(self):
+        # Define dinámicamente la URL de redirección al completar con éxito
+        return reverse("transaction_list")
 	
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -269,9 +268,9 @@ class Transaction_DeleteView(DeleteView):
     template_name = "transaction/transaction_delete.html"
     model = Transaction
 
-	    def get_success_url(self):
-	        # Define dinámicamente la URL de redirección al completar con éxito
-	        return reverse("transaction_list")
+    def get_success_url(self):
+        # Define dinámicamente la URL de redirección al completar con éxito
+        return reverse("transaction_list")
 	
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

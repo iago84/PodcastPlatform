@@ -1,6 +1,7 @@
 from rest_framework.generics import *
 from .models import *
 from .serializers import *
+from rest_framework import permissions
 
 class ReportListAPIView(ListAPIView):
     queryset = Report.objects.all()

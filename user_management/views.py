@@ -8,7 +8,7 @@ from user_management.forms import UserRegisterForm
 
 
 def index_view(request):
-	return render(request, 'index.html')
+	return render(request, 'base.html')
 
 
 def login_view(request):

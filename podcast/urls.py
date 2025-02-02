@@ -3,7 +3,6 @@ from .views import *
 from .api import *
 
 urlpatterns = [
-    path("", IndexView.as_view(), name="index"),
 ]
 
 urlpatterns += [

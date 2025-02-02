@@ -1,0 +1,117 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: #007bff; /* Bootstrap primary color */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important; /* Highlight on hover */
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+/* Carousel Styles */
+.carousel-item img {
+    height: 400px; /* Fixed height for carousel images */
+    object-fit: cover; /* Ensure images cover the space without distortion */
+    border-radius: 10px;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds shadow for better visibility */
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Content Area */
+.container {
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Add Space Around the Footer Links */
+footer ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+
+    footer ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
